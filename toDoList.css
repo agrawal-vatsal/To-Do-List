@@ -1,14 +1,9 @@
 body {
   background-image: linear-gradient(to right, #0ecaf4, #e5e1b7);
 }
-* {
-  font: Lato;
-}
 .mainMenu{
-  width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 80px;
+  width: 360px;
+  margin: 100px auto;
 }
 #header {
   background-color: #3163b2;
@@ -18,6 +13,7 @@ body {
   text-transform: uppercase;
   clear: both;
   font-weight: bold;
+  font-family: Lato;
 }
 .alignLeft {
   margin: 10px;
@@ -28,50 +24,58 @@ body {
   margin: 10px;
 }
 input {
-  width: 340px;
-  background-color: #dee4ed;
-  height: 30px;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  height: 40px;
+  width: 100%;
+  padding: 10px;
   border: 0px;
-  padding-left: 10px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  display: block;
 }
-.inputInFocus {
-  margin-left: auto;
-  margin-right: auto;
-  width: 336px;
-  height: 26px;
+input:focus {
+  width: 100%
   background-color: white;
-  color: #3163ff;
+  color: #3163b2;
   outline: 0px;
+  box-sizing: border-box;
   border-width: 2px;
   border-style: solid;
   border-color: #3163b2;
 }
 .oneToDo {
-  width: 350px;
-  height: 16px;
-  padding-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 10px;
-  max-height: 16px;
+  height: 40px;
+  line-height: 40px;
+  background-color: white;
+  color: #666;
+  margin: 0;
+  padding: 0;
+}
+.oneToDo:nth-of-type(2n) {
+  background-color: #f7f7f7;
 }
 .sideBox {
-  padding: 10px;
-  background-color: red;
+  background-color: #e74c3c;
   color: white;
-  display: none;
+  width: 0;
+  height: 40px;
+  margin-right: 10px;
+  display: inline-block;
+	transition: 0.5s linear;
+	opacity: 0;
+  text-align: center;
+}
+.oneToDo:hover .sideBox{
+  width: 40px;
+  opacity: 1.0;
 }
 .task {
-  height: 36px;
-  padding-left: 10px;
-  font: Lato;  
+  height: 40px;
 }
 .greyBackground {
-  background-color: #dee4ed;
+  background-color: #f7f7f7;
 }
 .whiteBackground {
   background-color: white;
+}
+.strikeThrough {
+  text-decoration: line-through;
 }
